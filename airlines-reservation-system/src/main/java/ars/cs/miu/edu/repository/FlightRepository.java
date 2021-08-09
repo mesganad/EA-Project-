@@ -7,5 +7,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public interface FlightRepository extends JpaRepository<Flight,Long> {
+public interface FlightRepository extends JpaRepository<Flight, Long> {
 }

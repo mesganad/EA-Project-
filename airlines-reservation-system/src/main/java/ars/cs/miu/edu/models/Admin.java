@@ -1,8 +1,9 @@
 package ars.cs.miu.edu.models;
 
 import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 
-@DiscriminatorValue(value = "Admin")
+@Entity
 public class Admin extends Person{
 
 }

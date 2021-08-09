@@ -7,5 +7,5 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 @Transactional
-public interface AddressRepository extends JpaRepository<Address,Long> {
+public interface AddressRepository extends JpaRepository<Address, Long> {
 }

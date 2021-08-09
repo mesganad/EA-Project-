@@ -6,15 +6,12 @@ import javax.persistence.*;
 import java.time.LocalDate;
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name="person_type",
-        discriminatorType = DiscriminatorType.STRING)
-public abstract class Person {
+@Inheritance(strategy = InheritanceType.JOINED)
+public  class Person {
     @Id
     @GeneratedValue
     private long id;
@@ -26,7 +23,8 @@ public abstract class Person {
     private String password;
     private LocalDate dateOfBirth;
     private Role role;
-    @ManyToOne
+    public Person(){}
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Address address;
-    private String person_type;
 }

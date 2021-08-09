@@ -12,12 +12,10 @@ import java.util.List;
 @ToString
 @EqualsAndHashCode
 @Entity
-@DiscriminatorValue(value = "Passenger")
 public class Passenger extends Person{
-    @Id
-    @GeneratedValue
-    private long id;
+
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn
     private List<Reservation> reservations;
 
 }
