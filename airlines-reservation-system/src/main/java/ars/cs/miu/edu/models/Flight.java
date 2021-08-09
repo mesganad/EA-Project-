@@ -3,7 +3,6 @@ package ars.cs.miu.edu.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -18,8 +17,8 @@ public class Flight {
     private long id;
     private int flightNumber;
     private int capacity;
-    private LocalDate departureTime;
-    private LocalDate arrivalTime;
+//    private LocalDate departureTime;
+//    private LocalDate arrivalTime;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Airport arrivalAirport;

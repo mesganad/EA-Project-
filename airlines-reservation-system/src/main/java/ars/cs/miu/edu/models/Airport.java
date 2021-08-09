@@ -2,10 +2,7 @@ package ars.cs.miu.edu.models;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -20,6 +17,6 @@ public class Airport {
     private long id;
     private String code;
     private String name;
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     private Address address;
 }

@@ -14,7 +14,7 @@ import javax.persistence.*;
 @SecondaryTable(name = "History")
 public class Airline {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String code;
     private String name;
